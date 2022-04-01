@@ -1,0 +1,184 @@
+/* Global Rules */
+
+:root {
+  --bright-green: #12cab7;
+  --grey: #f6f6f6;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+/* Header */
+
+.header {
+  padding: 20px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  width: 60px;
+}
+
+.header i {
+  font-size: 20px;
+}
+
+.header i:hover {
+  color: var(--bright-green);
+}
+
+.header .links {
+  position: relative;
+}
+
+.header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100%+15p);
+  background-color: var(--grey);
+  display: none;
+}
+
+.header .links:hover ul {
+  display: block;
+  margin-top: 21px;
+}
+
+.header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent var(--grey) transparent;
+  position: absolute;
+  right: 0;
+  top: -20px;
+}
+
+.header .links a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  color: #333;
+}
+
+.header .links a:hover {
+  padding-left: 25px;
+}
+
+.header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+/* End Header */
+
+/* Landing */
+.landing {
+  height: calc(100vh - 64px);
+  background-image: url(../img/landing.jpg);
+  background-size: cover;
+}
+
+.landing .welcome-text {
+  width: 350px;
+  max-width: 100%;
+  margin: auto;
+  position: absolute;
+  top: calc(50% - 55px);
+  right: calc(50% - 170px);
+  text-align: center;
+}
+
+.landing .welcome-text h1 {
+  color: var(--bright-green);
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+.landing .welcome-text p {
+  line-height: 1.8;
+  font-weight: 400;
+}
+/* End Landing */
+
+/* Features Section */
+.features {
+  display: flex;
+  background-color: var(--grey);
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.features .feature {
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .features .feature {
+    margin-top: 10px;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+}
+
+.features .feature i {
+  font-size: 50px;
+  color: var(--bright-green);
+}
+
+.features .feature h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+.features .feature p {
+  color: #777;
+  line-height: 1.8;
+}
+/* End Features Section */
