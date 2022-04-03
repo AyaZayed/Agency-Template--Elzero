@@ -209,6 +209,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 30px;
   padding: var(--section-padding);
+  padding-bottom: 0;
 }
 
 .services .service {
@@ -241,6 +242,12 @@ body {
   text-align: center;
 }
 
+@media (max-width: 1200px) {
+  #img-col {
+    display: none;
+  }
+}
+
 .services #img-col img {
   width: 260px;
   /* height: 300px; */
@@ -257,3 +264,39 @@ body {
   z-index: -1;
 }
 /* End Services Section */
+
+/* Portfolio Section */
+
+.portfolio {
+  padding: 35px;
+  background-color: var(--grey);
+}
+
+.portfolio .pale-heading {
+  margin-top: 30px;
+}
+
+.portfolio .cards {
+  display: flex;
+  margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+  .portfolio .cards {
+    flex-direction: column;
+  }
+}
+
+.portfolio .cards .card {
+  margin: 20px;
+  background-color: #fff;
+}
+
+.portfolio .cards .card img {
+  max-width: 100%;
+}
+
+.portfolio .cards .card .text {
+  padding: 5px 20px;
+}
+/* End Portfolio Section */
