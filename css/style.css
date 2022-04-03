@@ -6,6 +6,7 @@
   --heading: #ebeced;
   --dark-grey: #797979;
   --section-padding: 70px;
+  --dark-green: #2c4755;
 }
 
 * {
@@ -299,4 +300,120 @@ body {
 .portfolio .cards .card .text {
   padding: 5px 20px;
 }
+
+.portfolio .cards .card .text p {
+  color: var(--dark-grey);
+}
 /* End Portfolio Section */
+
+/* About Section */
+
+.about .about-content {
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .about .about-content {
+    flex-direction: column;
+  }
+}
+
+.about .about-content .image-col {
+  position: relative;
+  width: 450px;
+  height: 375px;
+  margin-bottom: 50px;
+  margin-right: 120px;
+}
+
+.about .about-content .image-col img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.about .about-content .image-col::before {
+  content: "";
+  background-color: var(--heading);
+  width: 100px;
+  height: calc(100% + 80px);
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  z-index: -1;
+}
+
+.about .about-content .image-col::after {
+  content: "";
+  width: 120px;
+  height: 300px;
+  border-bottom: 80px solid var(--bright-green);
+  border-left: 80px solid var(--bright-green);
+  position: absolute;
+  top: -40px;
+  z-index: -1;
+  left: 200px;
+}
+
+.about .about-content .text-col {
+  line-height: 2;
+  width: 65%;
+}
+
+@media (max-width: 768px) {
+  .about .about-content .text-col {
+    width: 100%;
+  }
+}
+
+.about .about-content .text-col p:first-child {
+  font-weight: 700;
+}
+
+.about .about-content .text-col p:last-child {
+  color: var(--dark-grey);
+}
+
+.about .about-content .text-col hr {
+  border-color: var(--bright-green);
+  width: 50%;
+  margin: 20px 0;
+  display: inline-block;
+}
+/* End About Section */
+
+/* Contact Section */
+.contact {
+  background-color: var(--grey);
+  padding: 1px;
+}
+
+.contact .contact-content {
+  text-align: center;
+  margin: 100px 0;
+}
+
+.contact .contact-content h2 {
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.contact .contact-content h2:first-of-type {
+  letter-spacing: -1.5px;
+}
+
+.contact .contact-content h2:first-of-type,
+p {
+  color: var(--dark-green);
+}
+
+.contact .contact-content h2:last-of-type {
+  color: var(--bright-green);
+}
+
+.contact .contact-content p i {
+  margin: 0 3px;
+}
+/* End Contact Section */
